@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -13,9 +14,16 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setupEvents()
+        setValues()
     }
 
     override fun setupEvents() {
+//        리니어 레이아웃의 클릭 이벤트
+        signUpBtn.setOnClickListener {
+            Toast.makeText(mContext, "회원가입을 시도합니다.", Toast.LENGTH_SHORT).show()
+        }
+
 
 //        전체동의 체크박스 : 체크되면 나머지를 전부 체크, 해제되면 모두 해제.
         allAcceptCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
