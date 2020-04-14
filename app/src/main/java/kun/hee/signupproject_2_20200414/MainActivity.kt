@@ -19,7 +19,7 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
-//        리니어 레이아웃의 클릭 이벤트
+//        리니어 레이아웃의 클릭 이벤트!
         signUpBtn.setOnClickListener {
             Toast.makeText(mContext, "회원가입을 시도합니다.", Toast.LENGTH_SHORT).show()
         }
